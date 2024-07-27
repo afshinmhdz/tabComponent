@@ -19,7 +19,16 @@ const tabData = [
 ];
 
 function App() {
-return <h1>Tab Component : starter file</h1>
+  return (
+    <div className="tab">
+      <div className="tab__header">
+        <button>ITEM 1</button>
+        <button>ITEM 2</button>
+        <button>ITEM 3</button>
+      </div>
+      <div className="tab__content">DUMMY TEXT</div>
+    </div>
+  );
 }
 
 export default App;

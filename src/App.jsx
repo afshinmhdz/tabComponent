@@ -19,12 +19,17 @@ const tabData = [
 ];
 
 function App() {
+  const [activeTab,setActiveTab]=useState(1);
+  const handelActiveTab=(id)=>{
+    setActiveTab=id;
+    console.log(setActiveTab);
+  }
   return (
     <div className="tab">
       <div className="tab__header">
         {tabData.map((tab) => {
           return (
-            <button key={tab.id} onClick={handelActiveTab} className="active">
+            <button key={tab.id} onClick={()=>handelActiveTab(tab.id)} className="active">
               <span>{tab.title}</span>
               <span className="tab-indicator"></span>
             </button>

@@ -86,3 +86,6 @@ button {
   color: white;
   transition: 0.5s;
 }
+.show:not(:hover){
+  transition: 0.5s;
+}

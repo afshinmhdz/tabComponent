@@ -22,9 +22,14 @@ function App() {
   return (
     <div className="tab">
       <div className="tab__header">
-        <button>ITEM 1</button>
-        <button>ITEM 2</button>
-        <button>ITEM 3</button>
+        {tabData.map((tab) => {
+          return (
+            <button key={tab.id} onClick={handelActiveTab} className="active">
+              <span>{tab.title}</span>
+              <span className="tab-indicator"></span>
+            </button>
+          );
+        })}
       </div>
       <div className="tab__content">DUMMY TEXT</div>
     </div>
